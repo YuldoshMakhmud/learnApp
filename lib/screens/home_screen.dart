@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:english/screens/course_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -179,7 +180,12 @@ List imgList = [
                   ),
                   itemBuilder: (context, index){
                     return InkWell(
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => 
+                          CourseScreen(imgList[index])
+                        ));
+                      },
                       child: Container(
                         padding: 
                         EdgeInsets.symmetric(vertical: 20, horizontal: 10),
